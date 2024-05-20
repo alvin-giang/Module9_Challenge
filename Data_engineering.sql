@@ -37,9 +37,8 @@ CREATE TABLE dept_manager(
 );
 
 CREATE TABLE salaries (
+	salary_id SERIAL PRIMARY KEY NOT NULL,
 	emp_no INTEGER NOT NULL,
 	FOREIGN KEY (emp_no) REFERENCES employee (emp_no),
 	salary INTEGER NOT NULL	
 );
-
-SELECT * FROM salaries
